@@ -9,10 +9,18 @@ export default function FormPage() {
   const [step, setStep] = useState(1);
 
   const stepsLength = [1, 2, 3, 4];
+
+
   const goToNextStep = (e) => {
     e.preventDefault();
     if (step < 4) setStep(step + 1);
+
+    // Zustand Updat
+
+       
   };
+
+
 
   return (
     <form className="w-full ">
@@ -34,7 +42,7 @@ export default function FormPage() {
       </div>
 
       {/* {fom content} */}
-      <div className="min-h-56 my-3 bg-gray-200 ">
+      <div className="min-h-56 my-3 bg-gray-200 p-4 flex">
         {step === 1 ? (
         <Step1/>
     ) : step === 2 ? (
